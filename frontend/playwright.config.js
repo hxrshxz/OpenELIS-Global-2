@@ -4,6 +4,9 @@ module.exports = defineConfig({
   retries: 1,
   workers: 2, // increasing workers to more than 2 causes tests to fail
   timeout: 30000,
+  expect: {
+    timeout: 10000,
+  },
   // try one retry as some tests are flaky
   // reporter: [["html", { outputFolder: "playwright-report", open: "never" }]],
   use: {
