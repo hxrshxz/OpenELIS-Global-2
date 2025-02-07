@@ -57,9 +57,12 @@ describe("Order Entity", function () {
     cy.fixture("Order").then((order) => {
       orderEntityPage.validateAcessionNumber(order.invalidLabNo);
     });
+    console.log('00000');
     orderEntityPage.generateLabOrderNumber();
-    cy.get("#labNo").then(($input) => {
+    console.log('111111');
+    cy.get("#display_labNo").then(($input) => {
       const generatedOrderNumber = $input.val();
+      console.log('22222');
       cy.fixture("Order").then((order) => {
         order.labNo = generatedOrderNumber;
         cy.writeFile("cypress/fixtures/EnteredOrder.json", order);
