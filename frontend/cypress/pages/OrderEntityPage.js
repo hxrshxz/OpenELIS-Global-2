@@ -35,7 +35,7 @@ class OrderEntityPage {
     cy.intercept("GET", `**/rest/SampleEntryAccessionNumberValidation**`).as(
       "accessionNoValidation",
     );
-    cy.get("#labNo").type(order, { delay: 300 });
+    cy.get("#display_labNo").type(order, { delay: 300 });
 
     cy.wait("@accessionNoValidation").then((interception) => {
       const responseBody = interception.response.body;
