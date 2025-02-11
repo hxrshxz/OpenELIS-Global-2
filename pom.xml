@@ -585,7 +585,7 @@
     <repository>
         <id>uwdigi-repo-central</id>
         <name>DIGI Public Repository</name>
-        <url>https://packages.uwdigi.org/artifactory/public</url>
+        <url>https://repo1.maven.org/maven2/net/minidev/json-smart/maven-metadata.xml</url>
     </repository>
 </repositories>
   <build>
